@@ -49,3 +49,59 @@ p {
 
 
 /** CODIGO AQUI **/
+.contenedor {
+    display: flex;
+    flex-direction: column;
+}
+@media screen and (min-width: 768px) {
+    .contenedor {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    aside {
+        order: 2;
+        flex-basis: 33.33%;
+    }
+
+    main {
+        order: 1;
+        flex-basis: 66.66%;
+    }
+}
+@media screen and (min-width: 1024px) {
+    .contenedor {
+        flex-direction: row;
+        flex-wrap: wrap-reverse;
+    }
+
+    aside {
+        order: 3;
+        flex-basis: 33.33%;
+    }
+
+    main {
+        order: 2;
+        flex-basis: 66.66%;
+    }
+}
+@media screen and (min-width: 0px) {
+    .contenedor {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    aside {
+        order: 1; 
+        flex-basis: 50%; 
+    }
+
+    main {
+        order: 2; 
+        flex-basis: 50%;
+    }
+
+    .entrada-blog:last-child {
+        flex-basis: 100%; 
+    }
+}
